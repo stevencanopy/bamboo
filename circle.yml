@@ -1,0 +1,9 @@
+dependencies:
+  pre:
+     - mkdir -p $HOME/.go_workspace/src/github.com/QubitProducts
+     - ln -s $HOME/bamboo $HOME/.go_workspace/src/github.com/QubitProducts
+     - go get github.com/tools/godep
+     - go get -t github.com/smartystreets/goconvey
+     - godep restore
+     - go build
+
